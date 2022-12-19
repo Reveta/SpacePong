@@ -2,19 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = System.Random;
 
 public class BallMoving : MonoBehaviour {
 // Start is called before the first frame update
 	[SerializeField] float speed;
 	private Rigidbody2D _body;
+	[SerializeField] private bool randomMoves = false;
 
 	private static readonly string Wall = "Wall";
 	private readonly string _wallUp = $"{Wall}Up";
 	private readonly string _wallDown = $"{Wall}Down";
 	private readonly string _wallLeft = $"{Wall}Left";
 	private readonly string _wallRight = $"{Wall}Right";
-	
+
 	private static readonly string Player = "Player";
 	private readonly string _playerRight = $"{Player}Right";
 	private readonly string _playerLeft = $"{Player}Left";
@@ -37,10 +39,13 @@ public class BallMoving : MonoBehaviour {
 // Update is called once per frame
 	void Update() {
 
-		if (new Random().Next(1, 200) == 1) {
-			_body.velocity = new Vector2(9, 4);
-			return;
+		if (randomMoves) {
+			if (new Random().Next(1, 200) == 1) {
+				_body.velocity = new Vector2(9, 4);
+				return;
+			}
 		}
+		
 		_body.velocity = new Vector2(_oldX, _oldY);
 	}
 
@@ -67,17 +72,17 @@ public class BallMoving : MonoBehaviour {
 			_contactWall = _wallDown;
 			print(_wallDown);
 		}
-		
+
 		if (col.gameObject.CompareTag(_wallLeft)) {
 			_contactWall = _wallLeft;
 			print(_wallLeft);
 		}
-		
+
 		if (col.gameObject.CompareTag(_wallRight)) {
 			_contactWall = _wallRight;
 			print(_wallRight);
 		}
-		
+
 		if (col.gameObject.CompareTag(_playerLeft)) {
 			_contactWall = _wallLeft;
 			print(_playerLeft);
@@ -88,11 +93,11 @@ public class BallMoving : MonoBehaviour {
 			print(_playerRight);
 		}
 
-		
+
 		var (newX, newY) = GetXY();
 		_oldX = newX;
 		_oldY = newY;
 		print(newX + " " + newY);
-		
+
 	}
 }
