@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player1
+      name: Player2
       rect:
         serializedVersion: 2
         x: 136
@@ -221,7 +221,7 @@ TextureImporter:
         width: 3
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: 0abef400e66eb8540b81da638f619fb5
       internalID: 585954166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 6
+        width: 3
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adea2d243ae4abf469af0c0c6ee3a950
+      internalID: 494264457
       vertices: []
       indices: 
       edges: []
@@ -246,9 +267,10 @@ TextureImporter:
     nameFileIdTable:
       Dungeon_Tileset_1: 873055193
       Dungeon_Tileset_2: -1680063352
-      Player1: 585954166
+      Player1: 494264457
       Dungeon_Tileset_3: -9136421
-      Dungeon_Tileset_0: 1992089503
+      Player2: 1992089503
+      Dungeon_Tileset_0: 494264457
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
