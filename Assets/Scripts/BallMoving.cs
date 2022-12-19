@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class BallMoving : MonoBehaviour {
 // Start is called before the first frame update
@@ -31,6 +32,11 @@ public class BallMoving : MonoBehaviour {
 
 // Update is called once per frame
 	void Update() {
+
+		if (new Random().Next(1, 200) == 1) {
+			_body.velocity = new Vector2(9, 4);
+			return;
+		}
 		_body.velocity = new Vector2(_oldX, _oldY);
 	}
 
