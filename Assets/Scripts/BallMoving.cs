@@ -9,11 +9,15 @@ public class BallMoving : MonoBehaviour {
 	[SerializeField] float speed;
 	private Rigidbody2D _body;
 
-	private static readonly string _wall = "Wall";
-	private readonly string _wallUp = $"{_wall}Up";
-	private readonly string _wallDown = $"{_wall}Down";
-	private readonly string _wallLeft = $"{_wall}Left";
-	private readonly string _wallRight = $"{_wall}Right";
+	private static readonly string Wall = "Wall";
+	private readonly string _wallUp = $"{Wall}Up";
+	private readonly string _wallDown = $"{Wall}Down";
+	private readonly string _wallLeft = $"{Wall}Left";
+	private readonly string _wallRight = $"{Wall}Right";
+	
+	private static readonly string Player = "Player";
+	private readonly string _playerRight = $"{Player}Right";
+	private readonly string _playerLeft = $"{Player}Left";
 
 	private bool _contact;
 	private String _contactWall;
@@ -73,6 +77,17 @@ public class BallMoving : MonoBehaviour {
 			_contactWall = _wallRight;
 			print(_wallRight);
 		}
+		
+		if (col.gameObject.CompareTag(_playerLeft)) {
+			_contactWall = _wallLeft;
+			print(_playerLeft);
+		}
+
+		if (col.gameObject.CompareTag(_playerRight)) {
+			_contactWall = _wallRight;
+			print(_playerRight);
+		}
+
 		
 		var (newX, newY) = GetXY();
 		_oldX = newX;
