@@ -8,6 +8,8 @@ TagManager:
   - WallRight
   - WallUp
   - WallDown
+  - PlayerLeft
+  - PlayerRight
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 638891837
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4158706847
     locked: 0
