@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Enum;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = System.Random;
@@ -12,6 +13,7 @@ public class BallMoving : MonoBehaviour {
 	[SerializeField] float speed; 
 	private float speed_def;
 	private Rigidbody2D _body;
+	
 	[SerializeField] private bool randomMoves = false;
 
 	private static readonly string Wall = "Wall";
@@ -29,9 +31,18 @@ public class BallMoving : MonoBehaviour {
 
 	private float _oldX;
 	private float _oldY;
-	// Start is called before the first frame update
+
+	private GoalsController _goalsContr;
+	private SpeedController _speedContr;
+	private ScoreController _scoreContr;
+
 	void Start() {
+		_speedContr = SpeedController.Inst;
+		_scoreContr = ScoreController.Inst;
+		_goalsContr = GoalsController.Inst;
+		
 		_body = GetComponent<Rigidbody2D>();
+
 		speed_def = speed;
 
 		_oldX = -speed;
@@ -53,7 +64,7 @@ public class BallMoving : MonoBehaviour {
 	}
 
 	private (float, float) GetXY() {
-		print("CONTACT!");
+		//print("CONTACT!");
 		if (string.Equals(_contactWall, _wallUp) || _contactWall.Equals(_wallDown)) {
 			return (_oldX, _oldY * -1);
 		}
@@ -67,6 +78,7 @@ public class BallMoving : MonoBehaviour {
 	private void UpdateDiffucult() {
 		// this.speed += speed / 10;
 		this.speed += 0.1f;
+		_speedContr.SpeedUpdate(speed.ToString("0.00"));
 	}
 
 	private void GoalEvent(EGates eGates) {
@@ -77,51 +89,52 @@ public class BallMoving : MonoBehaviour {
 			speed = speed_def;
 		}).Start();
 		transform.position = new Vector3(0, 1);
-		
-		print("GOAL!");
+
+		_scoreContr.ScoreUpdate(speed);
+		_goalsContr.GoalsUpdatePlusOne();
 	}
 
 	private void OnCollisionEnter2D(Collision2D col) {
 
 		if (col.gameObject.CompareTag(_wallUp)) {
 			_contactWall = _wallUp;
-			print(_wallUp);
+			//print(_wallUp);
 		}
 
 		if (col.gameObject.CompareTag(_wallDown)) {
 			_contactWall = _wallDown;
-			print(_wallDown);
+			//print(_wallDown);
 		}
 
 		if (col.gameObject.CompareTag(_wallLeft)) {
 			_contactWall = _wallLeft;
 			GoalEvent(EGates.Left);
-			print(_wallLeft);
+			//print(_wallLeft);
 		}
 
 		if (col.gameObject.CompareTag(_wallRight)) {
 			_contactWall = _wallRight;
 			GoalEvent(EGates.Right);
-			print(_wallRight);
+			//print(_wallRight);
 		}
 
 		if (col.gameObject.CompareTag(_playerLeft)) {
 			_contactWall = _wallLeft;
 			UpdateDiffucult();
-			print(_playerLeft);
+			//print(_playerLeft);
 		}
 
 		if (col.gameObject.CompareTag(_playerRight)) {
 			_contactWall = _wallRight;
 			UpdateDiffucult();
-			print(_playerRight);
+			//print(_playerRight);
 		}
 
 
 		var (newX, newY) = GetXY();
 		_oldX = newX;
 		_oldY = newY;
-		print(newX + " " + newY);
+		//print(newX + " " + newY);
 
 	}
 }
