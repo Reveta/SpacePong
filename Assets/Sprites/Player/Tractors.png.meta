@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a9c5291505b4ec4da49c747a8b9ddb3
+guid: 1b3d7a656b084448834a9bf144db4fcd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tractor1_Down
+      name: Tractors_0
       rect:
         serializedVersion: 2
         x: 88
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f840486199ac541bef57737508a6d0
-      internalID: -639892648
+      spriteID: aa749e059c2872f4aa091e6c1ee7a3ab
+      internalID: -1657781536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor2_Down
+      name: Tractors_1
       rect:
         serializedVersion: 2
         x: 354
@@ -164,17 +164,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 708972b1fe8353147b8c4646e89298da
-      internalID: -905611527
+      spriteID: a8ae55006116692459cd562eab014156
+      internalID: -755898265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor1_Up
+      name: Tractors_2
       rect:
         serializedVersion: 2
-        x: 87
+        x: 88
         y: 38
         width: 184
         height: 288
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9901227cbd54cff4aac51a31e4ab80ef
-      internalID: 1238277618
+      spriteID: 004ab951c33af644384e9817bf9e1551
+      internalID: 369627192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tractor2_Up
+      name: Tractors_3
       rect:
         serializedVersion: 2
         x: 354
@@ -206,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ebcc6453e82aaf4f9d8efee32d75435
-      internalID: -918077662
+      spriteID: 77f9b61966103bc43b7cd901accf4be6
+      internalID: 364981048
       vertices: []
       indices: 
       edges: []
@@ -223,10 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tractor2_Up: -918077662
-      Tractor2_Down: -905611527
-      Tractor1_Up: 1238277618
-      Tractor1_Down: -639892648
+      Tractors_3: 364981048
+      Tractors_0: -1657781536
+      Tractors_2: 369627192
+      Tractors_1: -755898265
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
