@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,13 @@ public class MenuController : MonoBehaviour
 {
 	
 	public GameObject panel;
-	
+
+	private void Start() {
+		panel.SetActive(false);
+	}
 	public void StartGame() {
 		SceneManager.LoadScene("Gameplay");
+		
 	}
 
 	public void OptionClick() {
