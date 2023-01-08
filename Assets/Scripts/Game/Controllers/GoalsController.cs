@@ -16,7 +16,7 @@ public class GoalsController : MonoBehaviour {
 		if (Inst == null) {
 			Inst = this;
 		}
-		
+
 		_gameContr = GameController.Inst;
 	}
 
