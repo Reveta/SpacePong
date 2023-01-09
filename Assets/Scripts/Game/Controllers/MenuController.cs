@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour
-{
+public class MenuController : MonoBehaviour {
+    private GameEngine _gameEngine;
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        _gameEngine = GameEngine.Inst;
+
     }
 
     // Update is called once per frame
@@ -18,10 +18,10 @@ public class MenuController : MonoBehaviour
     }
 
     private void ESC_Check() {
-        // print("Test");
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            SceneManager.LoadScene("GameMenu");
+            _gameEngine.SetPause(!_gameEngine.IsPause);
+            // SceneManager.LoadScene("GameMenu");
         }
     }
 }

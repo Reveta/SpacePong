@@ -8,10 +8,11 @@ using Random = System.Random;
 namespace Game {
 	public class BallMoving : MonoBehaviour {
 // Start is called before the first frame update
-		[SerializeField] float speed; 
+		[SerializeField] float speed;
 		private float speed_def;
 		private Rigidbody2D _body;
-	
+		private GameEngine _gameEngine;
+
 		[SerializeField] private bool randomMoves = false;
 
 		private static readonly string Wall = "Wall";
@@ -35,10 +36,11 @@ namespace Game {
 		private ScoreController _scoreContr;
 
 		void Start() {
+			_gameEngine = GameEngine.Inst;
 			_speedContr = SpeedController.Inst;
 			_scoreContr = ScoreController.Inst;
 			_goalsContr = GoalsController.Inst;
-		
+
 			_body = GetComponent<Rigidbody2D>();
 
 			speed_def = speed;
@@ -50,6 +52,12 @@ namespace Game {
 
 // Update is called once per frame
 		void Update() {
+			if (!_gameEngine.BallMoving) {
+				_body.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+			} else {
+				_body.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+
+			}
 
 			if (randomMoves) {
 				if (new Random().Next(1, 200) == 1) {
@@ -57,7 +65,8 @@ namespace Game {
 					return;
 				}
 			}
-		
+
+
 			_body.velocity = new Vector2(_oldX * speed, _oldY * speed);
 		}
 
