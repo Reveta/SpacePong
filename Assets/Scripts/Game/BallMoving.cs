@@ -52,7 +52,7 @@ namespace Game {
 
 // Update is called once per frame
 		void Update() {
-			if (!_gameEngine.BallMoving) {
+			if (!_gameEngine.ballMoving) {
 				_body.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
 			} else {
 				_body.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
