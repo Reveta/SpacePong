@@ -2,7 +2,7 @@ using Game.Controllers;
 using TMPro;
 using UnityEngine;
 
-namespace Menu {
+namespace Menu.Options {
 	public class UserNameScript : MonoBehaviour {
 		public TMP_Text _username;
 

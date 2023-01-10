@@ -1,6 +1,4 @@
-﻿using Unity.VisualScripting;
-
-namespace Enum {
+﻿namespace Game.Enum {
 	public enum EGates {
 		Left,
 		Right

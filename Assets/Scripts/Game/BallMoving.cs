@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
-using Enum;
 using Game.Controllers;
+using Game.Enum;
 using UnityEngine;
 using Random = System.Random;
 
