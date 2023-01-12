@@ -26,7 +26,6 @@ namespace Game.Controllers {
             panel.SetActive(!panel.activeSelf);
         }
 
-        // Update is called once per frame
         public void RestartGame() {
             SceneManager.LoadScene("Gameplay");
         }
