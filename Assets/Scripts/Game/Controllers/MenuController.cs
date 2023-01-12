@@ -27,6 +27,10 @@ namespace Game.Controllers {
         }
 
         // Update is called once per frame
+        public void RestartGame() {
+            SceneManager.LoadScene("Gameplay");
+        }
+        
         public void OpenStartMenu() {
             SceneManager.LoadScene("GameMenu");
         }

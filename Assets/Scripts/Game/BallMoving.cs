@@ -21,7 +21,7 @@ namespace Game {
 		private readonly string _wallLeft = $"{Wall}Left";
 		private readonly string _wallRight = $"{Wall}Right";
 
-		private static readonly string Player = "Player";
+		private static readonly string Player = "Player"; 
 		private readonly string _playerRight = $"{Player}Right";
 		private readonly string _playerLeft = $"{Player}Left";
 
