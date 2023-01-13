@@ -15,6 +15,12 @@ namespace Menu {
 		
 		}
 
+		public void StartGameArt() {
+			SceneManager.LoadScene("GameplayPensilArt");
+		
+		}
+
+		
 		public void OptionClick() {
 			panel.SetActive(!panel.activeSelf);
 		}
