@@ -15,8 +15,6 @@ namespace Game.Controllers {
 				Inst = this;
 				DontDestroyOnLoad(gameObject);
 			}
-			// DontDestroyOnLoad(gameObject);
-
 		}
 	}
 }
