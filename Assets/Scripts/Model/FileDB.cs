@@ -12,17 +12,8 @@ namespace Model {
 		private void Awake() {
 			if (Inst == null) {
 				Inst = this;
+				DontDestroyOnLoad(this);
 			}
-		}
-		private void Start()
-		{
-			if (File.Exists(_fileName))
-			{
-				var fileContent = File.ReadAllText(_fileName);
-				var data = fileContent;
-				print("Data loaded: \n" + data);
-			}
-			DontDestroyOnLoad(this);
 		}
 		
 		public void AddResult(UserResult userResult) {
