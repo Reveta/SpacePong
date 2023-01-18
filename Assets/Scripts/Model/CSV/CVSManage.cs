@@ -23,7 +23,7 @@ namespace Model {
 				Name = split[1],
 				Goals = Convert.ToInt32(split[2]),
 				Score = Convert.ToInt32(split[3]),
-				MaxSpeed = float.Parse(split[4], CultureInfo.InvariantCulture.NumberFormat)
+				MaxSpeed = float.Parse(split[4], CultureInfo.CurrentCulture.NumberFormat)
 			};
 
 			return userResult;

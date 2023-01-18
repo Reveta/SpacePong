@@ -30,18 +30,12 @@ namespace Model {
 		}
 		
 		public List<UserResult> GetAllResult() {
-			var data = File.ReadAllText(_fileName);
-			var userResults = CvsManage.DecodeAll(data);
-			return userResults;
-		}
-
-		public void Test() {
-			AddResult(new UserResult() {
-				Name = "roman",
-				MaxSpeed = 2313
-			});
-			
-			GetAllResult().ForEach(print);
+			if (File.Exists(_fileName)) {
+				var data = File.ReadAllText(_fileName);
+				var userResults = CvsManage.DecodeAll(data);
+				return userResults;
+			}
+			return new List<UserResult>();
 		}
 	}
 }
