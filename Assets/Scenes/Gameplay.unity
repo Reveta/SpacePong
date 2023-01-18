@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175835141101e9646a46b4918fea5aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxResultInTable: 10
   id: {fileID: 1401417394}
   userName: {fileID: 285863635}
   maxSpeed: {fileID: 698470073}

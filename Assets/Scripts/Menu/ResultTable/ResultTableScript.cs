@@ -9,6 +9,9 @@ using UnityEngine.Serialization;
 public class ResultTableScript : MonoBehaviour {
 	// Start is called before the first frame update
 
+	public int maxResultInTable;
+
+	
 	public TMP_Text id;
 	public TMP_Text userName;
 	public TMP_Text maxSpeed;
@@ -21,6 +24,7 @@ public class ResultTableScript : MonoBehaviour {
 
 		_dataBase.GetAllResult()
 			.OrderByDescending(result1 => result1.MaxSpeed)
+			.Take(maxResultInTable)
 			.ToList()
 			.ForEach(result =>
 		{
