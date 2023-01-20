@@ -182,11 +182,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6c90ee196e84343bfaeee9099a333a, type: 3}
---- !u!20 &519420031 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1418337731344321806, guid: dd0a4e769f11bb44e9a65de4d953dabb, type: 3}
-  m_PrefabInstance: {fileID: 1418337731586192753}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1443676646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,6 +249,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: eb285b02e4776414f85bf6b570486853, type: 3}
+--- !u!114 &1443676647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6420424539297095694, guid: eb285b02e4776414f85bf6b570486853, type: 3}
+  m_PrefabInstance: {fileID: 1443676646}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e9c27d402fed743826a1599988c09a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &313681235549899605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1418337731344321806, guid: dd0a4e769f11bb44e9a65de4d953dabb, type: 3}
+      propertyPath: orthographic size
+      value: 6.1265154
+      objectReference: {fileID: 0}
     - target: {fileID: 1418337731344322033, guid: dd0a4e769f11bb44e9a65de4d953dabb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -372,6 +382,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dd0a4e769f11bb44e9a65de4d953dabb, type: 3}
+--- !u!20 &1418337731586192754 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1418337731344321806, guid: dd0a4e769f11bb44e9a65de4d953dabb, type: 3}
+  m_PrefabInstance: {fileID: 1418337731586192753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1686485120227416166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -383,7 +398,7 @@ PrefabInstance:
     - target: {fileID: 1686485120665273472, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 519420031}
+      objectReference: {fileID: 1418337731586192754}
     - target: {fileID: 1686485120665273473, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -472,6 +487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1443676647}
+    - target: {fileID: 1686485121388044521, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1443676647}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}

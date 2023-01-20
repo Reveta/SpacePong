@@ -10,6 +10,10 @@ TagManager:
   - WallDown
   - PlayerLeft
   - PlayerRight
+  - ResultUserName
+  - ResultGoals
+  - ResultMaxSpeed
+  - ResultId
   layers:
   - Default
   - TransparentFX

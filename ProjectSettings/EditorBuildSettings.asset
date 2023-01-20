@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameplayPensilArt.unity
     guid: a6af13497f6e55442a99f8090b2c2132
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a9928b1c57f978442b04a06b144432f3, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: ae841d787f07f224ebe0e3c3c85a4fa2, type: 2}

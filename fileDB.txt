@@ -1,0 +1,1 @@
+0*Reveta*0*0*6,5;0*Reveta*1*0*4,3;0*Reveta*0*0*5,3;0*Reveta*0*0*6,2;0*Reveta*2*0*7,5;0*Reveta*0*0*4,7;0*Reveta*0*0*3,7;0*Reveta*1*0*5,3;0*Reveta*4*0*6,6;0*Reveta*1*0*6,8;0*REVETA*0*0*6,8;0*Reveta*0*0*3,3;0*Reveta*0*0*4,3;0*Reveta*1*0*5,2;0*Reveta*2*0*7,4;0*Reveta*3*0*7,6;0*Reveta*5*0*7,8;0*Reveta*0*0*3,8;
