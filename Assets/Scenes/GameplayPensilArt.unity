@@ -910,12 +910,20 @@ PrefabInstance:
       value: 4286472028
       objectReference: {fileID: 0}
     - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6420424541048286987}
     - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: GameplayPensilArt
       objectReference: {fileID: 0}
     - target: {fileID: 1686485121347156369, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_Color.b
