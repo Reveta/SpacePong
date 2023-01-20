@@ -488,9 +488,17 @@ PrefabInstance:
       value: CanvasGame
       objectReference: {fileID: 0}
     - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1443676647}
+    - target: {fileID: 1686485121347156368, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Gameplay
+      objectReference: {fileID: 0}
     - target: {fileID: 1686485121388044521, guid: ebf7781e39b0cdd4eb8231a7d8add965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

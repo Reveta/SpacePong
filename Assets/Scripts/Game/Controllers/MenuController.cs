@@ -26,8 +26,8 @@ namespace Game.Controllers {
             panel.SetActive(!panel.activeSelf);
         }
 
-        public void RestartGame() {
-            SceneManager.LoadScene("Gameplay");
+        public void RestartGame(string nameScene) {
+            SceneManager.LoadScene(nameScene);
         }
         
         public void OpenStartMenu() {
