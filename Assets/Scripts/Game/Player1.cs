@@ -10,6 +10,9 @@ namespace Game {
 		private Rigidbody2D myBody;
 
 		private const string GROUND_TAG = "Ground";
+		private static readonly string Wall = "Wall";
+		private readonly string _wallUp = $"{Wall}Up";
+		private readonly string _wallDown = $"{Wall}Down";
 
 		private SpriteRenderer _sr;
 		private Sprite _tractorUp;
@@ -39,6 +42,8 @@ namespace Game {
 		private void FixedUpdate() {
 			// PlayerJump();
 		}
+
+
 
 		void PlayerMoveKeyboardUpdate() {
 			movementY = Input.GetAxisRaw("Vertical");
