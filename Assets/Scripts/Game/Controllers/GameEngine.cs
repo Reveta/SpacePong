@@ -19,10 +19,18 @@ namespace Game.Controllers {
 		}
 		void Start() {
 			_menuController = MenuController.Inst;
+			CleanDataBase();
 
 			SetPause(true);
 			StartCoroutine(StartCooldown());
 
+		}
+		
+		private void CleanDataBase() {
+			var gC = GameController.Inst;
+			gC.Goals = 0;
+			gC.Score = 0;
+			gC.SpeedSum = 0;
 		}
 
 		void Update() {

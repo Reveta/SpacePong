@@ -32,7 +32,7 @@ Material:
     - _FlipX: 0
     - _FlipY: 0
     - _Intensity: 0.34
-    - _Multiplier: 0.34
+    - _Multiplier: 0.339
     - _blurSizeXY: 1
     - _intensity: 0
     m_Colors:

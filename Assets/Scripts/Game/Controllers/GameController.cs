@@ -6,7 +6,7 @@ namespace Game.Controllers {
 
 		public string UserName { get; set; } = "Reveta";
 		public int Goals { get; set; } = 0;
-		public float ScoreSum { get; set; } = 0;
+		public float SpeedSum { get; set; } = 0;
 		public float Score { get; set; } = 0;
 		public int GoalLimit { get; set; } = 10;
 

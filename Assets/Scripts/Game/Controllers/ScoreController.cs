@@ -16,13 +16,12 @@ namespace Game.Controllers {
 			_gameContr = GameController.Inst;
 		}
 
-		public void ScoreUpdate(float score) {
+		public void ScoreUpdate(float speed) {
 			var goals = _gameContr.Goals;
 		
-			_gameContr.ScoreSum += score;
-			goals = goals+1; //save from 0 split exception and make correct score compile
+			_gameContr.SpeedSum += speed;
 		
-			var newScore = (_gameContr.ScoreSum / (goals+1));
+			var newScore = (_gameContr.SpeedSum / goals);
 			scoreNum.text = newScore.ToString("0.00");
 			_gameContr.Score = newScore;
 		}
